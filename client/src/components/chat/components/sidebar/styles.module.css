@@ -1,0 +1,21 @@
+.sidebar {
+  padding: 64px 48px 48px 16px;
+  min-width: 230px;
+}
+
+.header {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.users {
+  list-style: none;
+}
+
+.users li {
+  cursor: pointer;
+}
+
+.users li:not(:last-child) {
+  margin-bottom: 8px;
+}

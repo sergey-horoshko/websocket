@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './style.module.css';
+import styles from './styles.module.css';
 
-const Home = ({ socket }) => {
+const Home = ({socket}) => {
   const navigate = useNavigate()
   const [user, setUser] = useState('')
 
@@ -11,6 +11,10 @@ const Home = ({ socket }) => {
 
     if (user) {
       localStorage.setItem('user', user);
+      socket.emit('newUser', {
+        user,
+        socketID: socket.id
+      });
       navigate('/chat');
     } else {
       alert('Введите имя');

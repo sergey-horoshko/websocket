@@ -1,0 +1,9 @@
+.chat {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  width: 100%;
+  border-left: 1px solid #d5d5d5;
+}
